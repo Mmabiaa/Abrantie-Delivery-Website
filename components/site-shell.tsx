@@ -94,7 +94,7 @@ export function SiteHeader() {
           className={`header-nav ${menuOpen ? 'nav-open' : ''}`}
           aria-label="Primary navigation"
         >
-          <Link href="/about" onClick={() => setMenuOpen(false)}>
+          <Link href="/about" onClick={() => setMenuOpen(false)} className='text-center'>
             About
           </Link>
           <Link
