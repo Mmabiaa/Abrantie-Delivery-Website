@@ -85,7 +85,7 @@ export default function Home() {
                             <MapPin size={18} />
                             <div>
                                 <small>Next stop</small>
-                                <b>Osu, Accra</b>
+                                <b>Kumasi, Ghana</b>
                             </div>
                             <ChevronRight size={16} />
                         </div>
