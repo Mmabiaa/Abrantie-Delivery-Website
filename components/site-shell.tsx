@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
-import { useState } from 'react'
+import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 
 export function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -27,42 +28,84 @@ export function ButtonLink({
   )
 }
 
+function BrandMark() {
+  return (
+    <Link className="brand" href="/">
+      <span className="brand-mark" aria-hidden="true">
+        <Image
+          src="https://i.pinimg.com/736x/ca/3f/f3/ca3ff3275b612e4c7c6129445a5fff5f.jpg"
+          alt=""
+          width={34}
+          height={34}
+          className="brand-mark-img"
+          priority
+        />
+      </span>
+      <span>
+        <strong>Abrantie&apos;s</strong>
+        <small>Delivery Company Ltd.</small>
+      </span>
+    </Link>
+  )
+}
+
 export function SiteHeader() {
-  const [open, setOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    function handlePointerDown(event: PointerEvent) {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setMenuOpen(false)
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+
+    document.addEventListener('pointerdown', handlePointerDown)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [menuOpen])
 
   return (
-    <header className="site-header">
-      <Link className="brand" href="/">
-        <span className="brand-mark">A</span>
-        <span>
-          <strong>Abrantie&apos;s</strong>
-          <small>Delivery Company Ltd.</small>
-        </span>
-      </Link>
+    <header ref={headerRef} className="site-header">
+      <div className="header-inner">
+        <BrandMark />
 
-      <nav className={open ? 'nav-open' : ''}>
-        <Link href="/" onClick={() => setOpen(false)}>
-          Home
-        </Link>
-        <Link href="/about" onClick={() => setOpen(false)}>
-          About
-        </Link>
-        <Link href="/contact" onClick={() => setOpen(false)}>
-          Contact / Book
-        </Link>
-      </nav>
+        <button
+          className={`hamburger ${menuOpen ? 'is-open' : ''}`}
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
 
-      <Link className="header-cta" href="/contact">
-        Book a delivery <ArrowUpRight size={15} />
-      </Link>
-
-      <button
-        className="menu-button"
-        aria-label={open ? 'Close menu' : 'Open menu'}
-        onClick={() => setOpen(!open)}
-      >
-        {open ? <X /> : <Menu />}
-      </button>
+        <nav
+          className={`header-nav ${menuOpen ? 'nav-open' : ''}`}
+          aria-label="Primary navigation"
+        >
+          <Link href="/about" onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
+          <Link
+            className="header-pill"
+            href="/contact"
+            onClick={() => setMenuOpen(false)}
+          >
+            Book a delivery <ArrowUpRight size={15} />
+          </Link>
+        </nav>
+      </div>
     </header>
   )
 }
@@ -73,7 +116,13 @@ export function SiteFooter() {
       <div className="footer-main">
         <div>
           <Link className="brand footer-brand" href="/">
-            <span className="brand-mark">A</span>
+            <Image
+              className="brand-logo"
+              src="https://i.pinimg.com/736x/ca/3f/f3/ca3ff3275b612e4c7c6129445a5fff5f.jpg"
+              alt="Abrantie's Delivery Company logo"
+              width={40}
+              height={40}
+            />
             <span>
               <strong>Abrantie&apos;s</strong>
               <small>Delivery Company Ltd.</small>
