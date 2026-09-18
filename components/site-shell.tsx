@@ -150,14 +150,6 @@ export function SiteFooter() {
             Abrantiedelivery@gmail.com
           </a>
         </div>
-
-        <div className="footer-col">
-          <span>Follow along</span>
-          <a href="https://instagram.com/AbrantiesDelivery">
-            Instagram ↗
-          </a>
-          <p>Accra, Ghana</p>
-        </div>
       </div>
 
       <div className="footer-bottom">
