@@ -930,8 +930,8 @@ h2 em {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--acid);
+    color: var(--ink);
     padding: 17px 32px;
     border-radius: 99px;
     font-size: 12px;
@@ -945,6 +945,7 @@ h2 em {
 
 .about-cta .button:hover {
     background: var(--ink-soft);
+    color: var(--acid);
     transform: translateY(-2px);
     box-shadow: 0 16px 30px -12px rgba(17, 19, 21, .7);
 }
