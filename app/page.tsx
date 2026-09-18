@@ -3,8 +3,6 @@
 import Link from 'next/link'
 import {
     ArrowRight,
-    ArrowUpRight,
-    Check,
     ChevronRight,
     MapPin,
     Package,
@@ -150,7 +148,6 @@ export default function Home() {
                             <Package size={23} />
                             <h3>{title}</h3>
                             <p>{copy}</p>
-                            <ArrowUpRight className="service-arrow" size={18} />
                         </Link>
                     ))}
                 </div>
@@ -203,7 +200,7 @@ export default function Home() {
                         </h2>
                     </div>
                     <ButtonLink href="/contact">
-                        Book a delivery <ArrowUpRight size={15} />
+                        Book a delivery
                     </ButtonLink>
                 </div>
             </section>

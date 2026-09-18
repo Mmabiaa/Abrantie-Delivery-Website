@@ -115,7 +115,7 @@ export default function AboutPage() {
                     <em>in mind?</em>
                 </h2>
                 <ButtonLink href="/contact">
-                    Talk to our team <ArrowUpRight size={15} />
+                    Talk to our team
                 </ButtonLink>
             </section>
 

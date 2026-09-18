@@ -102,7 +102,7 @@ export function SiteHeader() {
             href="/contact"
             onClick={() => setMenuOpen(false)}
           >
-            Book a delivery <ArrowUpRight size={15} />
+            Book a delivery
           </Link>
         </nav>
       </div>
