@@ -13,9 +13,6 @@ export default function AboutPage() {
 
             <section className="page-intro">
                 <div>
-                    <div className="eyebrow-pill">
-                        <span /> The team behind the movement
-                    </div>
                     <h1>
                         Local roots.
                         <br />
@@ -31,7 +28,7 @@ export default function AboutPage() {
             <section className="about-feature">
                 <div className="about-image">
                     <img
-                        src="/courier-hero.png"
+                        src="https://i.pinimg.com/736x/04/d7/6e/04d76ebdc2c85860735f94e43d5a1d50.jpg"
                         alt="Abrantie's courier ready to deliver across Accra"
                     />
                     <div className="image-label">

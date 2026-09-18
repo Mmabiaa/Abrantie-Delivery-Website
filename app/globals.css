@@ -926,6 +926,38 @@ h2 em {
     margin-bottom: 30px;
 }
 
+.about-cta .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 17px 32px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 12px 24px -12px rgba(17, 19, 21, .65);
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.about-cta .button:hover {
+    background: var(--ink-soft);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px -12px rgba(17, 19, 21, .7);
+}
+
+.about-cta .button:active {
+    transform: translateY(0);
+}
+
+.about-cta .button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+}
+
 /* ---------- Booking / Contact ---------- */
 .booking-layout {
     max-width: 1280px;
