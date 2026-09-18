@@ -5,23 +5,23 @@ import './globals.css'
 export const metadata: Metadata = {
   title: "Abrantie's Delivery | Accelerating Your Deliveries",
   description: "Fast, reliable and secure doorstep delivery service across Ghana.",
-  generator: 'v0.app',
+  generator: 'Mmabiaa',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: 'https://i.pinimg.com/736x/ca/3f/f3/ca3ff3275b612e4c7c6129445a5fff5f.jpg',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: 'https://i.pinimg.com/736x/ca/3f/f3/ca3ff3275b612e4c7c6129445a5fff5f.jpg',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: 'https://i.pinimg.com/736x/ca/3f/f3/ca3ff3275b612e4c7c6129445a5fff5f.jpg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: 'https://i.pinimg.com/736x/ca/3f/f3/ca3ff3275b612e4c7c6129445a5fff5f.jpg',
   },
 }
 
