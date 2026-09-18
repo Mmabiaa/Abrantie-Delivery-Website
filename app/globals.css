@@ -760,7 +760,8 @@ h2 em {
     color: var(--ink);
 }
 
-.cta-panel .button {
+.cta-panel .button,
+.about-cta .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -777,17 +778,20 @@ h2 em {
     transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
-.cta-panel .button:hover {
+.cta-panel .button:hover,
+.about-cta .button:hover {
     background: var(--ink-soft);
     transform: translateY(-2px);
     box-shadow: 0 16px 30px -12px rgba(17, 19, 21, .7);
 }
 
-.cta-panel .button:active {
+.cta-panel .button:active,
+.about-cta .button:active {
     transform: translateY(0);
 }
 
-.cta-panel .button:focus-visible {
+.cta-panel .button:focus-visible,
+.about-cta .button:focus-visible {
     outline: 2px solid var(--ink);
     outline-offset: 3px;
 }
@@ -1085,9 +1089,37 @@ textarea:focus {
 }
 
 .submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 27px;
-    background: var(--orange);
-    padding: 14px 18px;
+    background: var(--ink);
+    color: var(--acid);
+    padding: 17px 32px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 12px 24px -12px rgba(17, 19, 21, .65);
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.submit-button:hover {
+    background: var(--ink);
+    color: var(--acid);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px -12px rgba(17, 19, 21, .7);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.submit-button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
 }
 
 .success-message {
@@ -1389,6 +1421,8 @@ textarea:focus {
     }
 
     .cta-panel .button {
+        display: flex;
+        width: 100%;
         margin-top: 25px;
     }
 

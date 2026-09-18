@@ -26,9 +26,6 @@ export default function ContactPage() {
 
             <section className="page-intro contact-intro">
                 <div>
-                    <div className="eyebrow-pill">
-                        <span /> Start your delivery
-                    </div>
                     <h1>
                         Tell us where
                         <br />
@@ -43,9 +40,6 @@ export default function ContactPage() {
 
             <section className="booking-layout">
                 <aside className="contact-sidebar">
-                    <div className="sidebar-status">
-                        <span /> Dispatch team online
-                    </div>
                     <h2>
                         One message
                         <br />
@@ -166,7 +160,7 @@ export default function ContactPage() {
                             </label>
 
                             <button className="submit-button">
-                                Request a quote <ArrowRight size={16} />
+                                Book Us
                             </button>
                         </form>
                     )}
