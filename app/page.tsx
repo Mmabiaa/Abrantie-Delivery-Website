@@ -33,9 +33,6 @@ export default function Home() {
 
             <section className="command-hero">
                 <div className="hero-command-copy">
-                    <div className="eyebrow-pill">
-                        <span /> Accra / Ghana / Live operations
-                    </div>
                     <h1>
                         Move it
                         <br />
@@ -47,10 +44,14 @@ export default function Home() {
                     </p>
                     <div className="hero-actions">
                         <ButtonLink href="/contact">
-                            Start a delivery <ArrowUpRight size={15} />
+                            Start a delivery
+                            <ArrowRight size={15} />
                         </ButtonLink>
-                        <Link className="ghost-link" href="/contact#tracking">
-                            Track a parcel <ArrowRight size={15} />
+                        <Link className="hero-btn-secondary" href="/contact#tracking">
+                            <span className="hero-btn-secondary-icon">
+                                <ScanLine size={13} />
+                            </span>
+                            Track a parcel
                         </Link>
                     </div>
                     <div className="hero-metrics">
@@ -71,7 +72,7 @@ export default function Home() {
 
                 <div className="hero-visual">
                     <img
-                        src="/courier-hero.png"
+                        src="https://i.pinimg.com/736x/0c/25/77/0c25771c7dcc508d1fddac81285b3538.jpg"
                         alt="Abrantie's courier delivering a parcel in Accra"
                     />
                     <div className="visual-overlay" />
